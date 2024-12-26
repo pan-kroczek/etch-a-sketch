@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+#container {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.square {
+    display: flex;
+    flex-basis: 6%;
+    aspect-ratio: 1 / 1;
+    background-color: gold;
+    border: 1px solid black;
+}
