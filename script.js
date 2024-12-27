@@ -1,14 +1,25 @@
 const container = document.querySelector("#container");
-let side = 16;
-let area = side * side;
-let percent = 100 / side;
+const input = document.querySelector("#canvasArea");
+const create = document.querySelector("#create");
 
-for (i = 0; i < area; i++) {
-    let square = document.createElement("div");
-    square.classList.add("square");
-    square.style.flexBasis = `${percent}%`;
-    container.appendChild(square);
-    square.addEventListener("mouseenter", () => {
-        square.style.backgroundColor = "#434343";
-    })
-}
+function createGrid(size = 16) {
+    let area = size * size;
+    let percent = 100 / size;
+
+    for (i = 0; i < area; i++) {
+        let square = document.createElement("div");
+        square.classList.add("square");
+        square.style.flexBasis = `${percent}%`;
+        container.appendChild(square);
+        square.addEventListener("mouseenter", () => {
+            square.style.opacity += 1;
+        });
+    };
+};
+
+create.addEventListener("click", () => {
+    location.reload();
+    createGrid(input.value);
+});
+
+createGrid();
