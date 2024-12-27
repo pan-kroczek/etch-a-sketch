@@ -15,10 +15,10 @@ body {
 .square {
     display: flex;
     aspect-ratio: 1 / 1;
-    background-color: gold;
+    background-color: #f3f3f3;
     border: none;
 }
 
-.square:hover {
+/* .square:hover {
     background-color: brown;
-}
+} */

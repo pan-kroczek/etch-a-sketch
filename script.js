@@ -8,4 +8,7 @@ for (i = 0; i < area; i++) {
     square.classList.add("square");
     square.style.flexBasis = `${percent}%`;
     container.appendChild(square);
+    square.addEventListener("mouseenter", () => {
+        square.style.backgroundColor = "#434343";
+    })
 }
