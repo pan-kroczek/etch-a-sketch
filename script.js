@@ -1,6 +1,7 @@
 const container = document.querySelector("#container");
 const input = document.querySelector("#canvasArea");
 const create = document.querySelector("#create");
+const reset = document.querySelector("#reset");
 
 function createGrid(size = 16) {
     let area = size * size;
@@ -17,9 +18,21 @@ function createGrid(size = 16) {
     };
 };
 
+function removeChildren() {
+    while (container.hasChildNodes()) {
+        container.removeChild(container.firstChild);
+      }
+}
+
+createGrid();
+
 create.addEventListener("click", () => {
-    location.reload();
+    removeChildren();
     createGrid(input.value);
 });
 
-createGrid();
+reset.addEventListener("click", () => {
+    input.value = 16;
+    removeChildren();
+    createGrid();
+})

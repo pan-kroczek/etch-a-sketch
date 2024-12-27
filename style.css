@@ -29,14 +29,15 @@ input {
     background-color: #e0e0e0;
 }
 
-button {
+#create, #reset {
     font-size: 16px;
+    text-transform: uppercase;
     border: none;
-    padding: 6px 12px 6px 12px;
+    padding: 6px 16px 6px 16px;
     background-color: pink;
 }
 
-button:hover {
+#create:hover {
     background-color: firebrick;
     color: white;
 }
