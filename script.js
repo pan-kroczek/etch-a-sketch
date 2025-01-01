@@ -13,7 +13,8 @@ function createGrid(size = 16) {
         square.style.flexBasis = `${percent}%`;
         container.appendChild(square);
         square.addEventListener("mouseenter", () => {
-            square.style.opacity += 1;
+            opacity = square.style.opacity;
+            square.style.opacity = opacity ? (parseFloat(opacity) + 0.1) : 0.2;
         });
     };
 };
